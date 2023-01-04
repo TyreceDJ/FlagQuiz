@@ -1,0 +1,21 @@
+#card {
+    background-color: aqua;
+
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    margin-top: -50px; 
+    margin-left: -100px; 
+
+    display: flex;
+    justify-content: center;
+
+    width: 400px;
+    height: 500px;
+}
+
+.answers {
+    background-color: bisque;
+    border: ;
+    font-family: Roboto;
+}
