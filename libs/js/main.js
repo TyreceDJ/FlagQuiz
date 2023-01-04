@@ -1,5 +1,7 @@
 fetch("libs/json/countries.json").then(response => response.json()).then(GameHandler)
 
+answerList = []
+
 function isIn(arr, x) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == x) {
@@ -10,12 +12,14 @@ function isIn(arr, x) {
 }
 
 function randomCountries() {
-    let numList = [Math.floor(Math.random() * 261)]
+    let answer = Math.floor(Math.random() * 261)
+    answerList.push(answer)
+    let numList = [answer]
 
     for (let i = 0; i < 3; i++) {
         let randNum = Math.floor(Math.random() * 261)   
 
-        while (isIn(numList, randNum)) {
+        while (isIn(numList, randNum) || isIn(answerList, randNum)) {
             randNum = Math.floor(Math.random() * 261) 
 
         } 
@@ -27,16 +31,9 @@ function randomCountries() {
 }
 
 function createImage(country) {
-    let image = document.createElement('img')
+    let box = document.getElementById('figure')
+    box.style.backgroundImage = "url(" + country.image + ")"
 
-    image.src = country.image
-    image.alt = country.name
-
-    image.id = 'flag'
-    image.width = "200"
-    image.height = "100"
-
-    document.getElementById('card').appendChild(image)
 }
 
 // Randomize an array

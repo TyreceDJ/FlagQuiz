@@ -1,4 +1,4 @@
-#card {
+/* #card {
     background-color: aqua;
 
     position: absolute;
@@ -12,10 +12,107 @@
 
     width: 400px;
     height: 500px;
+} */
+
+html {
+    height: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body { 
+    /* Prevents scrolling */
+    position: fixed;
+    overflow-y: scroll;
+
+    /* Animated Background */
+    background: linear-gradient(-45deg, #ffc997, #ffe282, #ffcab7, #ffe591);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+
+}
+
+#figure {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 125% 220%;
+}
+
+.answerContainer {
+    
 }
 
 .answers {
-    background-color: bisque;
-    border: ;
-    font-family: Roboto;
+    background: linear-gradient(45deg, #fae5cb, #f9d6b5);  
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px beige;
+
+    font-family: 'Ubuntu', sans-serif;
+    
+    font-size: 1.5em;
+    text-align: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
+
+/* Animated Background */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        width: 100vw;
+        height: 85vh;
+    }
+
+    #card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+
+        display: relative;
+        top: 100px;
+
+        width: 96%;
+        height: 97.5%;
+    }
+
+    #figure {
+        height: 35%;
+        width: 90%;
+
+        border: 3px solid rgb(25, 25, 25);
+        border-radius: 10px;
+
+
+        box-shadow: 0px 0px 100px rgba(255, 255, 255, 0);
+        
+    }
+
+    .answerContainer {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        margin-top: 60px;
+        font-size: 1.5em;
+    }
+}   
