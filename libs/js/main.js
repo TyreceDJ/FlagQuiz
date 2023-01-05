@@ -1,4 +1,4 @@
-fetch("libs/json/countries.json").then(response => response.json()).then(GameHandler)
+let pageState = 2
 
 answerList = []
 
@@ -66,6 +66,13 @@ function findName(arr, name) {
     }
 }
 
+// Change state to game page
+if (pageState == 2) {
+    document.getElementById('landPage').style.display = "none"
+    document.getElementById('card').style.display = "flex"
+    fetch("libs/json/countries.json").then(response => response.json()).then(GameHandler)
+}
+
 function GameHandler(data) {
     countryList = randomCountries()
 
@@ -88,3 +95,5 @@ function GameHandler(data) {
     console.log(newAnswerNumber)
 
 }
+
+// Want to set a timer on each card

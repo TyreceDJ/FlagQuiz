@@ -1,36 +1,14 @@
-html, body{
-    height: 100%;
-    width: 100%;
-
-    /* Text default value for page */
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 0px 0px 10px rgb(150, 150, 150);
-    color: white;
-}
-
-body { 
-    /* Prevents scrolling */
-    position: fixed;
-    overflow-y: scroll;
-
-    /* Animated Background */
-    background-image: radial-gradient(#021027, #000000);
-    
-    /* Center card */
-    display: flex;
-    justify-content: center;
-}
-
 #card {
     /* Card dimensions */
     height: 95vh;
     width: 400px;
 
     /* Center image text and answer choices */
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
+
+    text-align: center;
 }
 
 #image, #question {
