@@ -1,0 +1,3 @@
+[submodule "FlagQuiz"]
+	path = FlagQuiz
+	url = https://github.com/TyreceDJ/FlagQuiz.git

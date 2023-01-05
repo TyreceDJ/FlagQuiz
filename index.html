@@ -11,6 +11,7 @@
 
     <!--Import CSS-->
     <link rel="stylesheet" href="libs/css/styles.css">
+    <link rel="stylesheet" href="libs/css/backgroud.css">
 
     <!--Import Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,17 +21,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="area">
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
     <div id="card">
-        <div id="figure"></div>
-        <h1>What country's flag is this?</h1>
+        <div id="image"></div>
+        <h1 id="question">What country's flag is this?</h1>
         <div class="answerContainer">
             <h1 class="answers" id="ans1"></h1>
             <h1 class="answers" id="ans2"></h1>
             <h1 class="answers" id="ans3"></h1>
             <h1 class="answers" id="ans4"></h1>
         </div>
+        <h1 id="qNumber">1 / 10</h1>
     </div>
-    <footer>1/10</footer>
 </body>
 </html>

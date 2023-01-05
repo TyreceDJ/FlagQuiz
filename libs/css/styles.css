@@ -1,23 +1,12 @@
-/* #card {
-    background-color: aqua;
-
-    position: absolute;
-    top: 20%;
-    left: 45%;
-    margin-top: -50px; 
-    margin-left: -100px; 
-
-    display: flex;
-    justify-content: center;
-
-    width: 400px;
-    height: 500px;
-} */
-
-html {
+html, body{
     height: 100%;
+    width: 100%;
+
+    /* Text default value for page */
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 0px 0px 10px rgb(150, 150, 150);
+    color: white;
 }
 
 body { 
@@ -26,93 +15,82 @@ body {
     overflow-y: scroll;
 
     /* Animated Background */
-    background: linear-gradient(-45deg, #ffc997, #ffe282, #ffcab7, #ffe591);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-
+    background-image: radial-gradient(#021027, #000000);
+    
+    /* Center card */
+    display: flex;
+    justify-content: center;
 }
 
-#figure {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 125% 220%;
+#card {
+    /* Card dimensions */
+    height: 95vh;
+    width: 400px;
+
+    /* Center image text and answer choices */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#image, #question {
+    /* Change vertical spacing */
+    margin-top: -20%;
+}
+
+#image, .answerContainer, .answers {
+    width: 95%;
+}
+
+#question, #qNumber {
+    /* Question and question number font-size */
+    font-size: 1.7em;
 }
 
 .answerContainer {
-    
+    /* Center answer */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* Change vertical spacing */
+    margin-top: -10%;
 }
 
 .answers {
-    background: linear-gradient(45deg, #fae5cb, #f9d6b5);  
-    border: 2px solid black;
+    /* Style border around text */
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
-    box-shadow: 0px 0px 5px beige;
+    border-color: rgba(255, 255, 255, 0.322);
 
-    font-family: 'Ubuntu', sans-serif;
-    
-    font-size: 1.5em;
-    text-align: center;
+    /* Spacing between answers */
+    margin-top: 5px;
+    margin-bottom: 5px;
 
+    /* Spacing between text */
     padding-top: 10px;
     padding-bottom: 10px;
 
+    /* Text cahnges */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.25em;
+    text-align: center;
 }
 
-/* Animated Background */
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+#qNumber {
+    margin-top: 10%;
 }
 
 @media only screen and (max-width: 500px) {
-    body {
-        width: 100vw;
-        height: 85vh;
-    }
-
     #card {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-between;
-
-        display: relative;
-        top: 100px;
-
-        width: 96%;
+        /* Card size for mobile */
+        width: 95%;
         height: 97.5%;
     }
 
-    #figure {
-        height: 35%;
-        width: 90%;
-
-        border: 3px solid rgb(25, 25, 25);
-        border-radius: 10px;
-
-
-        box-shadow: 0px 0px 100px rgba(255, 255, 255, 0);
-        
-    }
-
-    .answerContainer {
-        width: 95%;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    footer {
-        margin-top: 60px;
-        font-size: 1.5em;
+    .answers {
+        /* Bigger answer choice for mobile */
+        padding-top: 4%;
+        padding-bottom: 4%;
     }
 }   

@@ -31,8 +31,10 @@ function randomCountries() {
 }
 
 function createImage(country) {
-    let box = document.getElementById('figure')
-    box.style.backgroundImage = "url(" + country.image + ")"
+    let image = document.createElement('img')
+    image.src = country.image
+    image.alt = country.name
+    document.getElementById('image').appendChild(image)
 
 }
 
