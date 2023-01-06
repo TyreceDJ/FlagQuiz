@@ -1,5 +1,3 @@
-let pageState = 2
-
 answerList = []
 
 function isIn(arr, x) {
@@ -11,6 +9,7 @@ function isIn(arr, x) {
     return false
 }
 
+// Random number generator
 function randomCountries() {
     let answer = Math.floor(Math.random() * 261)
     answerList.push(answer)
@@ -30,6 +29,7 @@ function randomCountries() {
 
 }
 
+// Creates the element and appends to the DOM
 function createImage(country) {
     let image = document.createElement('img')
     image.src = country.image
@@ -66,14 +66,21 @@ function findName(arr, name) {
     }
 }
 
-// Change state to game page
-if (pageState == 2) {
-    document.getElementById('landPage').style.display = "none"
-    document.getElementById('card').style.display = "flex"
-    fetch("libs/json/countries.json").then(response => response.json()).then(GameHandler)
+async function getJson(url) {
+    let response = await fetch(url);
+    let data = await response.json()
+    return data;
 }
 
-function GameHandler(data) {
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+async function gameRunner() {
+    await sleep(500)
+
+    document.getElementById('landPage').style.display = "none"
+    document.getElementById('card').style.display = "flex"
+    let data = await getJson("libs/json/countries.json")
+
     countryList = randomCountries()
 
     // Construct the image element
@@ -92,8 +99,7 @@ function GameHandler(data) {
     }
     // Find answer after randomization
     newAnswerNumber = findName(nameList, answer)
-    console.log(newAnswerNumber)
-
 }
 
-// Want to set a timer on each card
+// Starts the game
+document.getElementById('play').addEventListener('click', gameRunner)

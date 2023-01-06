@@ -1,0 +1,43 @@
+:root {
+    --blue: rgb(151, 203, 255);
+    --light-blue: #c7e3ff;
+    --goodBlue: aliceblue;
+    --buttonFade: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#gameBody {
+    /* Create div that cover entire page */
+    width: 100%;
+    height: 100%;
+
+    /* Centers card on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.buttons:hover {
+    /* Hover answers on desktop */
+    background: var(--buttonFade) radial-gradient(circle, transparent 1%, var(--buttonFade) 1%) center/15000%;
+    color: rgba(151, 203, 255, 0.7);
+    text-shadow: none;
+
+    /* Change cursor */
+    cursor: pointer;
+}
+
+.buttons:active {
+    background-color: var(--buttonFade);
+    background-size: 100%;
+    transition: background 0s;
+}

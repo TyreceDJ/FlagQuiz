@@ -1,74 +1,106 @@
-#card {
+#card {    
     /* Card dimensions */
-    height: 95vh;
+    height: 90vh;
     width: 400px;
 
     /* Center image text and answer choices */
     display: none;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
+    /* Centers text in card */
     text-align: center;
-}
 
-#image, #question {
-    /* Change vertical spacing */
-    margin-top: -20%;
-}
-
-#image, .answerContainer, .answers {
-    width: 95%;
-}
-
-#question, #qNumber {
-    /* Question and question number font-size */
     font-size: 1.7em;
 }
 
-.answerContainer {
-    /* Center answer */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    /* Change vertical spacing */
-    margin-top: -10%;
+#image, .answerContainer, .answerContainer>* {
+    width: 95%;
 }
 
-.answers {
+#image, #question, .answerContainer {
+    margin-bottom: 5%;
+}
+
+#image {
+    /* Contain the image with in the box */
+    display: flex;
+    justify-content: center;
+
+    /* Dimensions of the image */
+    height: 35%;
+}
+
+#image img {
+    /* Makes the image larger */
+    height: 100%;
+    width: 100%;
+
+    /* Crops the image to be larger */
+    object-fit: cover;
+}  
+
+#question, #qNumber {
+    /* Question and question number font-size */
+    font-size: 1.7rem;
+}
+
+.answerContainer {
+    /* Align the answer choices to center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answerContainer>* {
     /* Style border around text */
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.322);
 
     /* Spacing between answers */
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
     /* Spacing between text */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 4%;
+    padding-bottom: 4%;
 
     /* Text cahnges */
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.5rem;
     text-align: center;
+
+    /* Transitions */
+    transition: 0.2s;
 }
 
 #qNumber {
-    margin-top: 10%;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: none;
+    font-size: 0.7em;
 }
 
 @media only screen and (max-width: 500px) {
     #card {
-        /* Card size for mobile */
-        width: 95%;
-        height: 97.5%;
+        height: 98vh;
     }
 
-    .answers {
-        /* Bigger answer choice for mobile */
-        padding-top: 4%;
-        padding-bottom: 4%;
+    #card>* {
+        /* Prevent overflow from page */
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .answerContainer {
+        margin-bottom: 8px;
     }
 }   
+
+@media only screen and (max-width: 400px) {
+    #image {
+        margin-top: -10%;
+        margin-bottom: 0;
+    }
+}

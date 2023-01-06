@@ -1,20 +1,89 @@
 #landPage {
     /* Card dimensions */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Set the dimensions */
     height: 80vh;
-    width: 50vw;
-
-    margin-top: 5vh;
-
-    /* display: flex;
-    justify-content: center; */
-
+    width: 80vw;
 }
 
 #gameName {
+    margin-bottom: 30px;
+
+    /* Center the title */
     text-align: center;
     font-size: 3em;
+
+    /* Noen shadow */
+    text-shadow: -1px -1px 1px var(--light-blue), -1px 1px 1px var(--light-blue), 1px -1px 1px var(--light-blue), 1px 1px 1px var(--light-blue),
+    0 0 3px var(--light-blue), 0 0 10px var(--light-blue), 0 0 20px var(--light-blue),
+    0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 70px var(--blue), 0 0 100px var(--blue), 0 0 200px var(--blue);
+
+    transition: 0.2s;
+}
+
+#gameName:hover {
+    color: var(--blue);
+    text-shadow: 0px 0px 50px var(--blue);
 }
 
 #intro {
     font-size: 1.5em;
+}
+
+#intro span {
+    color: var(--blue);
+}
+
+#play {
+    /* Style the border around the button */
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.322);
+
+    /* Set last element to the bottom */
+    margin-top: auto;
+
+    /* Dimementsions of the button */
+    height: 50px;
+    width: 150px;
+
+    /* Center text with box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Style text */
+    letter-spacing: 0.08em;
+
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 500px) {
+    #landPage {
+        height: 98vh;
+        width: 97vw;
+
+        margin: 0;
+    }
+
+    #gameName {
+        margin-top: 8%;
+    }
+
+    #intro {
+        padding-left: 7%;
+        padding-right: 7%;
+
+        line-height: 1.2em;
+        font-size: 1.3em;
+
+        text-align: center;
+    }
+
+    #play {
+        margin-bottom: 10%
+    }
 }

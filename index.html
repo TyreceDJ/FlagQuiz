@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="libs/css/landState.css">
     <link rel="stylesheet" href="libs/css/gameState.css">
     <link rel="stylesheet" href="libs/css/backgroud.css">
+    <link rel="stylesheet" href="libs/css/setting.css">
 
     <!--Import Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,32 +24,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <body class="area">
-    <div id="landPage">
-        <h1 id="gameName">&lt FlagQuiz &gt</h1>
-        <h2 id="intro">This is a flag guessing game! Read the intsturctions and press Play when your ready!</h1>
-    </div>
     <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
     </ul>
-    <div id="card">
-        <div id="image"></div>
-        <h1 id="question">What country's flag is this?</h1>
-        <div class="answerContainer">
-            <h1 class="answers" id="ans1"></h1>
-            <h1 class="answers" id="ans2"></h1>
-            <h1 class="answers" id="ans3"></h1>
-            <h1 class="answers" id="ans4"></h1>
+    <div id="gameBody">
+        <div id="landPage">
+            <h1 id="gameName">&lt FlagQuiz /&gt</h1>
+            <h2 id="intro">This is a flag guessing game! Read the intsturctions and press <span>Play</span> when your ready!</h2>
+            <h2 class="buttons" id="play">Play</h2>
         </div>
-        <h1 id="qNumber">1 / 10</h1>
+        <div id="card">
+            <div id="image"></div>
+            <h1 id="question">What country's flag is this?</h1>
+            <div class="answerContainer">
+                <h1 class="buttons" id="ans1"></h1>
+                <h1 class="buttons" id="ans2"></h1>
+                <h1 class="buttons" id="ans3"></h1>
+                <h1 class="buttons" id="ans4"></h1>
+            </div>
+            <h1 id="qNumber">1 / 10</h1>
+        </div>
     </div>
 </body>
 </html>
