@@ -1,7 +1,7 @@
-import { gameRunner, constructGame } from './flagGame.js';
+import { gameRunner, constructGame } from './gamePlayer.js';
 import { sleep } from './helper.js';
 
-let playButton = document.getElementById('play');
+const playButton = document.getElementById('play');
 
 function countryGetName(data, element) {
     return data[element].name;
@@ -13,23 +13,26 @@ function countryGetImage(data, element) {
 
 }
 
+// Async function that returns the data from json
 async function getJson(url) {
-    let response = await fetch(url);
-    let data = await response.json()
+    const response = await fetch(url);
+    const data = await response.json()
     return data;
 }
 
+// Starts the game by initializing a Game with JSON data and accessor functions
 async function stateGame() {
     playButton.removeEventListener('click', stateGame);
     await sleep(500);
 
-    let data = await getJson("libs/json/countries.json");
+    const data = await getJson("libs/json/countries.json");
 
     const flagQuiz = constructGame(data, {
         getImage: countryGetImage,
         getName: countryGetName
     });
 
+    // Changes the the game state
     document.getElementById('landPage').style.display = "none";
     document.getElementById('card').style.display = "flex";
 
