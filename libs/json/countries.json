@@ -301,13 +301,6 @@
         "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CG.svg"
     },
     {
-        "name": "Switzerland",
-        "code": "CH",
-        "emoji": "🇨🇭",
-        "unicode": "U+1F1E8 U+1F1ED",
-        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/CH.svg"
-    },
-    {
         "name": "Côte d’Ivoire",
         "code": "CI",
         "emoji": "🇨🇮",
@@ -1699,13 +1692,6 @@
         "emoji": "🇺🇿",
         "unicode": "U+1F1FA U+1F1FF",
         "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UZ.svg"
-    },
-    {
-        "name": "Vatican City",
-        "code": "VA",
-        "emoji": "🇻🇦",
-        "unicode": "U+1F1FB U+1F1E6",
-        "image": "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/VA.svg"
     },
     {
         "name": "St. Vincent & Grenadines",

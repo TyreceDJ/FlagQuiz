@@ -3,13 +3,15 @@
     --light-blue: #c7e3ff;
     --goodBlue: aliceblue;
     --buttonFade: rgba(255, 255, 255, 0.2);
+    --incorrectColor: rgba(255, 55, 55, 0.5);
+    --correctColor: rgba(50, 255, 50, 0.5);
 }
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
-
+  
 #gameBody {
     /* Create div that cover entire page */
     width: 100%;
@@ -23,7 +25,7 @@
 
 .buttons {
     background-position: center;
-    transition: background 0.8s;
+    transition: 0.3s;
 }
 
 .buttons:hover {
@@ -39,5 +41,5 @@
 .buttons:active {
     background-color: var(--buttonFade);
     background-size: 100%;
-    transition: background 0s;
+    transition: 0s;
 }

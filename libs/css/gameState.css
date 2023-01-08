@@ -24,15 +24,18 @@
 }
 
 #image {
+    position: relative;
     /* Contain the image with in the box */
     display: flex;
     justify-content: center;
+    align-items: center;
 
     /* Dimensions of the image */
     height: 35%;
 }
 
 #image img {
+    position: absolute;
     /* Makes the image larger */
     height: 100%;
     width: 100%;
@@ -40,6 +43,11 @@
     /* Crops the image to be larger */
     object-fit: cover;
 }  
+
+#imageBorder {
+    height: 90%;
+    width: 99%;
+}
 
 #question, #qNumber {
     /* Question and question number font-size */
@@ -98,7 +106,18 @@
     }
 }   
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) and (min-width: 390px) {
+    #imageBorder {
+        height: 82%;
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    #imageBorder {
+        height: 52vw;
+    }
+
     #image {
         margin-top: -10%;
         margin-bottom: 0;
