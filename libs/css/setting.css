@@ -5,6 +5,7 @@
     --buttonFade: rgba(255, 255, 255, 0.2);
     --incorrectColor: rgba(255, 55, 55, 0.5);
     --correctColor: rgba(50, 255, 50, 0.5);
+    --buttonRipple: var(--buttonFade) radial-gradient(circle, transparent 1%, var(--buttonFade) 1%) center/15000%;
 }
 
 * {
@@ -30,7 +31,7 @@
 
 .buttons:hover {
     /* Hover answers on desktop */
-    background: var(--buttonFade) radial-gradient(circle, transparent 1%, var(--buttonFade) 1%) center/15000%;
+    background: var(--buttonRipple);
     color: rgba(151, 203, 255, 0.7);
     text-shadow: none;
 

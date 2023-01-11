@@ -92,7 +92,7 @@
 
 @media only screen and (max-width: 500px) {
     #card {
-        height: 98vh;
+        height: 90vh;
     }
 
     #card>* {
